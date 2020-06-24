@@ -50,7 +50,7 @@ const Header = styled.div`
     text-orientation: mixed;
     justify-content: space-between;
     padding: 20px;
-    z-index: 1;
+    z-index: 3;
   }
 `;
 

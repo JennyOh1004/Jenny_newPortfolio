@@ -79,9 +79,8 @@ const Container = styled.div`
   .mainImage {
     position: absolute;
     top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     z-index: 1;
     object-fit: cover;
     mix-blend-mode: lighten;

@@ -73,35 +73,15 @@ class About extends Component {
   }
 }
 
-const Header = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 10vh;
-  width: 100%;
-`;
-
-const Logo = styled.div`
-  margin-right: auto;
-  margin: 10px;
-  font-size: 1.5rem;
-`;
-
-const Nav = styled.div`
-  margin-left: auto;
-  margin-top: 25px;
-  padding-right: 20px;
-`;
-
 const Wrapper = styled.div`
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-flow: column wrap;
-  border: solid 1px red;
 `;
 const Container = styled.div`
   display: flex;
   width: 50%;
-  border: solid 1px pink;
+  margin-top: 5%;
 
   .box {
     width: 10px;
@@ -213,10 +193,18 @@ const Container = styled.div`
     color: #fff;
     background: #000;
     outline: none;
-    border: none;
+    border-color: #000;
     letter-spacing: 2.5px;
     font-size: 1vw;
     border-radius: 3px;
+  }
+
+  .submit:hover {
+    color: #000;
+    background: #fff;
+    transition: linear all 0.3s;
+    border-radius: solid 0.5px #000;
+    cursor: pointer;
   }
 `;
 

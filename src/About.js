@@ -55,15 +55,14 @@ class About extends Component {
 }
 
 const Wrapper = styled.div`
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: row;
-  border: solid 1px red;
 `;
 const Container = styled.div`
   display: flex;
   flex-grow: 1;
-  border: solid 1px pink;
+  margin-top: 5%;
 
   .box {
     width: 10px;
@@ -98,7 +97,7 @@ const Container = styled.div`
   .about-p {
     position: relative;
     left: 5%;
-    width: 90%;
+    width: 60%;
     margin: 10px;
     padding: 20px;
     letter-spacing: 1.5px;
