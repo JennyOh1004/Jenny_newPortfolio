@@ -10,42 +10,35 @@ class About extends Component {
     return (
       <div>
         <Wrapper>
-          {projectData.map((project, index) => {
-            console.log(project);
-            return (
-              <ProjectCard key={index} title={project.title}></ProjectCard>
-            );
-          })}
-          <ProjectCard key={9} title={"soobin"}></ProjectCard>
           <Container>
-            <div className="project-image">
-              {/* <img src={metif} alt="Metif Main Image" /> */}
+            <div className="project">
+              <h3 className="project-title">
+                <div className="box"></div>PROJECTS
+              </h3>
             </div>
+            {projectData.map((project, index) => {
+              console.log(project);
+              return (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  desc={project.description}
+                  img={project.mainImg}
+                ></ProjectCard>
+              );
+            })}
+            {/* <ProjectCard key={9} title={project.title}></ProjectCard> */}
           </Container>
+          {/* <Container>
+            <div className="project-image">
+              <ProjectCard mainImg={project.mainImg}></ProjectCard>
+            </div>
+          </Container> */}
         </Wrapper>
       </div>
     );
   }
 }
-
-const Header = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 10vh;
-  width: 100%;
-`;
-
-const Logo = styled.div`
-  margin-right: auto;
-  margin: 10px;
-  font-size: 1.5rem;
-`;
-
-const Nav = styled.div`
-  margin-left: auto;
-  margin-top: 25px;
-  padding-right: 20px;
-`;
 
 const Wrapper = styled.div`
   height: 150vh;
@@ -56,7 +49,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 50%;
-  /* border: solid 1px pink; */
+  border: solid 1px pink;
+  margin-top: 5%;
 
   .box {
     width: 10px;
@@ -91,54 +85,6 @@ const Container = styled.div`
     color: #000;
     font-family: var(--body-fonts);
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-
-  .project-image img {
-    /* position: absolute; */
-    /* top: 30%;
-    right: 45%;
-    z-index: 0;  */
-    width: 120%;
-    margin-left: auto;
-    margin-top: 20%;
-  }
-
-  .project-desc {
-    position: absolute;
-    width: 35%;
-    height: 40%;
-    margin: 150px;
-    top: 35%;
-    right: 20px;
-    font-family: var(--body-fonts);
-    padding: 4%;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    background: #000;
-    color: #fff;
-  }
-
-  .project-desc h3 {
-    font-size: 30px;
-    letter-spacing: 2px;
-  }
-
-  .project-desc p {
-    font-size: 20px;
-  }
-
-  .project-desc button {
-    width: 30%;
-    height: 30%;
-    color: #000;
-    background: #fff;
-    outline: none;
-    border: none;
-    letter-spacing: 2.5px;
-    font-size: 1vw;
-    margin: 7%;
-    opacity: 0.9;
-    padding: 1%;
   }
 `;
 
