@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Jenny from "../src/assets/J.png";
+// import Jenny from "../assets/J.jpg";
 // import mainvideo from "../src/assets/peach.mp4";
 // import "../src/App.css";
 
@@ -20,7 +20,7 @@ class Home extends Component {
           </Container>
 
           <Container>
-            <img src={Jenny} alt="Main Image" className="mainImage" />
+            {/* <img src={Jenny} alt="Main Image" className="mainImage" /> */}
             {/* <video
               autoPlay
               muted
@@ -29,6 +29,7 @@ class Home extends Component {
               type="video/mp4"
               className="mainVideo"
             ></video> */}
+
             {/* <div className="hero"></div> */}
           </Container>
         </Wrapper>

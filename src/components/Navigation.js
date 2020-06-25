@@ -13,20 +13,29 @@ class Navigation extends Component {
         </Logo>
 
         <Nav>
-          <div className="nav">
-            <Link to="/about">About</Link>
+          <div className="main-nav">
+            <Link to="/about" className="nav">
+              About
+            </Link>
           </div>
-          <div className="nav">
-            <Link to="/projects">Projects</Link>
+          <div className="main-nav">
+            <Link to="/projects" className="nav">
+              Projects
+            </Link>
           </div>
-          <div className="nav">
-            <Link to="/contact">Contact</Link>
+          <div className="main-nav">
+            <Link to="/contact" className="nav">
+              Contact
+            </Link>
           </div>
-          {/* <div className="nav">
-            <a href={Resume} target="_blank">
+          <div className="main-nav">
+            <Link to="/" className="nav">
               Resume
-            </a>
-          </div> */}
+            </Link>
+            {/* <a href={Resume} target="_blank">
+              Resume
+            </a> */}
+          </div>
         </Nav>
       </Header>
     );
@@ -35,40 +44,56 @@ class Navigation extends Component {
 
 const Header = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   z-index: 1;
   position: fixed;
 
-  .nav {
-    padding-right: 30px;
+  .main-nav {
+    display: flex;
+    margin-top: 50px;
     font-family: var(--body-fonts);
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #fff;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+    /* writing-mode: vertical-rl;
+    text-orientation: mixed; */
     justify-content: space-between;
-    padding: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
     z-index: 3;
+    /* background: #fff; */
+    /* width: 10%; */
+    margin-left: auto;
   }
+
+  .nav {
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+  }
+
+  .nav:hover {
+    color: #fcb69f;
+    transition: linear all 0.3s;
+  }
+
+  /* .nav:active {
+    border-left: solid 2px #fcb69f;
+    margin-right: 5px;
+  } */
 `;
 
 const Logo = styled.div`
   margin-right: auto;
   margin: 10px;
   font-size: 1.5rem;
+  position: fixed;
 `;
 
 const Nav = styled.nav`
-  width: 50%;
+  width: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   margin-left: auto;
-  padding: 20px;
-  text-decoration: none;
-  color: #fff;
 `;
 
 export default Navigation;

@@ -20,10 +20,10 @@ class About extends Component {
               console.log(project);
               return (
                 <ProjectCard
-                  key={index}
                   title={project.title}
-                  desc={project.description}
-                  img={project.mainImg}
+                  description={project.description}
+                  mainImg={project.mainImg}
+                  key={index}
                 ></ProjectCard>
               );
             })}
@@ -44,12 +44,12 @@ const Wrapper = styled.div`
   height: 150vh;
   display: flex;
   justify-content: row;
+  color: #fff;
 `;
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  width: 50%;
-  border: solid 1px pink;
+  width: 100%;
   margin-top: 5%;
 
   .box {

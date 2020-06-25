@@ -49,13 +49,35 @@ const Container = styled.div`
     padding: 4%;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    /* background: #000; */
-    color: red;
+    background: #fff;
+    color: #000;
   }
 
   .project-desc h3 {
-    color: red;
+    color: #000;
     z-index: 2;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .project-desc p {
+    color: #000;
+    z-index: 2;
+    font-size: 20px;
+  }
+
+  .project-desc button {
+    width: 30%;
+    height: 30%;
+    color: #fff;
+    background: #cccccc;
+    outline: none;
+    border: solid 1px #fff;
+    letter-spacing: 2.5px;
+    font-size: 1vw;
+    margin: 7%;
+    opacity: 0.9;
+    padding: 1%;
   }
 `;
 
@@ -96,19 +118,19 @@ const Container = styled.div`
 //     font-size: 20px;
 //   }
 
-//   .project-desc button {
-//     width: 30%;
-//     height: 30%;
-//     color: #000;
-//     background: #fff;
-//     outline: none;
-//     border: none;
-//     letter-spacing: 2.5px;
-//     font-size: 1vw;
-//     margin: 7%;
-//     opacity: 0.9;
-//     padding: 1%;
-//   }
+// .project-desc button {
+//   width: 30%;
+//   height: 30%;
+//   color: #000;
+//   background: #fff;
+//   outline: none;
+//   border: none;
+//   letter-spacing: 2.5px;
+//   font-size: 1vw;
+//   margin: 7%;
+//   opacity: 0.9;
+//   padding: 1%;
+// }
 // `;
 
 export default ProjectCard;
